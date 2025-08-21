@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarly</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholarly - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assests/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Scholarly</h1>
-    </header>
-    <main>
-        <p>This is your starter page.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Scholarly</p>
-    </footer>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-lavender shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">Scholarly</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Welcome to Scholarly</h1>
+  <p>Your gateway to scholarship opportunities worldwide.</p>
+  <a href="register.html" class="btn btn-primary btn-lg mt-3">Get Started</a>
+</section>
+
+<!-- Content -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5 class="fw-bold">Search Scholarships</h5>
+        <p>Find scholarships tailored to your qualifications and interests.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5 class="fw-bold">Save & Apply</h5>
+        <p>Easily bookmark opportunities and track your applications.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5 class="fw-bold">Stay Updated</h5>
+        <p>Never miss deadlines with timely reminders and updates.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

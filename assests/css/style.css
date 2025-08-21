@@ -1,0 +1,75 @@
+/* Lavender Theme */
+.bg-lavender {
+  background-color: #9370db !important; /* primary lavender */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e6e6fa !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #9370db, #b19cd9);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 0 0 50px 50px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #9370db;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7a5dc7;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #9370db;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
