@@ -3,51 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scholarly - Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assests/css/style.css" rel="stylesheet">
+  <title>Scholarly Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/login.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="index.html" class="back-arrow">
+  &#8592; Back
+</a>
+  <div class="container-fluid h-100 p-0">
+    <div class="row g-0 h-100"> 
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-lavender shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html">Scholarly</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      <div class="col-md-8 left">
+        <img src="assets/images/Group 44.png" alt="Scholarly Logo" class="logo img-fluid">
+      </div>
 
-<!-- Login Form -->
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-5">
-      <div class="card p-4">
-        <h3 class="fw-bold text-center mb-3">Login</h3>
-        <form>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="Enter your email">
+      <div class="col-md-4 right">
+        <form class="login-form">
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">
+             <img src="assets/images/Vector.png" alt="User" width="20">
+            </span>
+            <input type="text" class="form-control" placeholder="Username/Email" required>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" placeholder="Enter password">
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">
+              <img src="assets/images/weui_lock-outlined.png" alt="Password" width="20">
+            </span>
+            <input type="password" class="form-control" placeholder="Password" required>
+            <span class="input-group-text">
+              
+            </span>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Login</button>
+
+          <button type="submit" class="btn w-100">SIGN IN</button>
+          
+          <p class="signup-text">
+            Don’t have an account? <a href="#">Sign up here</a>
+          </p>
+          
+          <div class="divider"><span>OR</span></div>
+          
+          <div class="social-login text-center">
+            <a href="#"><img src="assets/images/ic_outline-facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/ri_google-fill.png" alt="Google"></a>
+          </div>
         </form>
-        <p class="text-center mt-3"><a href="forgot.html">Forgot Password?</a></p>
       </div>
     </div>
   </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

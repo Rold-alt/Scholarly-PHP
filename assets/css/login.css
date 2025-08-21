@@ -1,0 +1,105 @@
+body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .left {
+      background-color: #b3a6d8; /* Light purple like in screenshot */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 100%;
+    }
+
+    .right {
+      background-color: #f4f4fc; /* Light gray/white background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-form {
+      width: 80%;
+    }
+
+    .input-group {
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .input-group-text {
+      background: #fff;
+      border: none;
+    }
+
+    .form-control {
+      border: none;
+      box-shadow: none !important;
+    }
+
+    .btn {
+      color: #fff;
+      background-color: #8b75d7;
+      border-radius: 20px;
+      font-weight: 700;
+      border: none;
+      padding: 10px;
+    }
+
+    .btn:hover {
+      background-color: #735dc0;
+    }
+
+    .signup-text {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .divider span {
+      background: #f4f4fc;
+      padding: 0 10px;
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+    }
+
+    .divider::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      z-index: 1;
+    }
+
+    .social-login a img {
+      width: 36px;
+      height: 36px;
+      margin: 0 10px;
+    }
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: #8b75d7; /* purple arrow */
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #735dc0; /* darker purple on hover */
+}
