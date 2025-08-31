@@ -4,49 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scholarly - Home</title>
-  <link href="assets/css/home.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <img src="assets/images/Group 44.png" alt="Scholarly Logo">
+  <div style="min-height: 100vh; display: flex; flex-direction: column; background-image: url('assets/images/HOME PAGE.png'); background-size: cover; background-position: center;">
+    
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="nav-left">
+        <img src="assets/images/Group 44.png" alt="Scholarly Logo"/>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="nav-link">Register</a>
+      </div>
     </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Register</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Scholarly</h1>
-    <p>Your hub for learning, collaboration, and academic growth. Start your journey today.</p>
-    <button>Get Started</button>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="card">
-      <h3>📚 Courses</h3>
-      <p>Explore curated courses designed to support academic success and lifelong learning.</p>
+    <!-- HERO TEXT -->
+    <div class="hero-text">
+      <div class="hero-title">
+        WELCOME TO SCHO<span style="color:#7575C3;">ARLY</span>!
+      </div>
+      <div class="hero-subtitle">
+        Empowering Learning, <span>One at a Time</span>.
+      </div>
     </div>
-    <div class="card">
-      <h3>👥 Community</h3>
-      <p>Connect with fellow learners, share knowledge, and grow together in an academic space.</p>
-    </div>
-    <div class="card">
-      <h3>📊 Progress Tracking</h3>
-      <p>Monitor your academic journey and track your achievements with detailed reports.</p>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Scholarly | All Rights Reserved</p>
-  </footer>
+    <!-- CTA BUTTON -->
+    <a href="#" class="get-started">GET STARTED</a>
 
+    <!-- SCHOLARSHIP CARDS -->
+    <div class="cards">
+      <div class="card">
+        <h3>Academic Scholarship</h3>
+        <p>For students with outstanding academic achievements who strive for excellence in education.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Financial Aid</h3>
+        <p>Supporting students from underprivileged backgrounds to continue their education journey.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Merit-Based Award</h3>
+        <p>Recognizing students with exceptional talents, skills, and leadership potential.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="text-align:center; padding:1rem; background:rgba(0,0,0,0.5); color:#fff; margin-top:auto;">
+  © 2025 Scholarly. All rights reserved. |
+  <a href="about.html" style="color:#fff; text-decoration:none; margin:0 8px;">About</a>
+  <a href="contact.html" style="color:#fff; text-decoration:none; margin:0 8px;">Contact</a>
+  <a href="privacy.html" style="color:#fff; text-decoration:none; margin:0 8px;">Privacy Policy</a>
+</footer>
+
+  </div>
 </body>
 </html>
