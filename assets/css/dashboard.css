@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: #f5f5f5; /* light gray/white background for content */
+  background: #f5f5f5; 
   color: #333;
 }
 
@@ -16,10 +16,10 @@ body {
   height: 100vh;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 260px;
-  background: #A4A4D7; /* purple only for sidebar */
+  background: #A4A4D7; 
   color: white;
   display: flex;
   flex-direction: column;
@@ -28,8 +28,9 @@ body {
 }
 
 .sidebar .logo {
-  margin-bottom: 20px;
-  max-width: 160px;
+ width: 250px;  
+ height: 65px;  
+ object-fit: contain;
 }
 
 .profile {
@@ -83,35 +84,33 @@ body {
 
 .nav a:hover {
   background: rgba(255,255,255,0.2);
-  color: black; /* text turns black on hover */
+  color: black; 
 }
 
 .nav img {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1); /* white icons */
+  filter: brightness(0) invert(1); 
   transition: filter 0.3s ease;
 }
 
 .nav a:hover img {
-  filter: brightness(0); /* black icons on hover */
+  filter: brightness(0); 
 }
 
-/* Main Content */
 .main-content {
   flex: 1;
   padding: 30px;
   overflow-y: auto;
-  background: #ffffff; /* white main area */
-  color: #333; /* normal text color */
+  background: #ffffff; 
+  color: #333; 
 }
 
 .main-content h1,
 .main-content p {
-  color: #333; /* readable on white */
+  color: #333; 
 }
 
-/* Controls */
 .controls {
   display: flex;
   justify-content: space-between;
@@ -143,7 +142,6 @@ body {
   background: #ddd;
 }
 
-/* Cards */
 .cards {
   display: flex;
   flex-direction: column;
@@ -172,7 +170,6 @@ body {
   height: 65px;
 }
 
-/* Buttons */
 .btn-primary {
   background-color: #8b75d7; 
   color: white;
