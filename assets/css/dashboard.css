@@ -15,7 +15,33 @@ body {
   display: flex;
   height: 100vh;
 }
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #A4A4D7; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.floating-btn:hover {
+  background-color: #8d8dc0;
+  transform: scale(1.1);
+}
+
+.floating-btn span {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
 
 .sidebar {
   width: 260px;
@@ -193,4 +219,34 @@ body {
 }
 .card-right .btn-primary {
   font-size: 14px;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.nav a:hover {
+  background: white;
+  color: black !important;
+}
+
+.nav a:hover img {
+  filter: brightness(0); /* makes icon black */
+}
+
+/* Active tab */
+.nav a.active {
+  background: white;
+  color: black !important;
+}
+
+.nav a.active img {
+  filter: brightness(0); /* makes icon black */
 }
