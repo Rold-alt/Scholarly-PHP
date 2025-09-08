@@ -20,20 +20,20 @@
       </div>
 
       <div class="col-md-4 right">
-        <form class="login-form">
+        <form class="login-form" method="POST" action="login.php">
 
           <div class="input-group mb-3">
             <span class="input-group-text">
              <img src="assets/images/Vector.png" alt="User" width="20">
             </span>
-            <input type="text" class="form-control" placeholder="Username/Email" required>
+            <input name="username_email" type="text" class="form-control" placeholder="Username/Email" required>
           </div>
 
           <div class="input-group mb-3">
             <span class="input-group-text">
               <img src="assets/images/weui_lock-outlined.png" alt="Password" width="20">
             </span>
-            <input type="password" class="form-control" placeholder="Password" required>
+            <input name="password" type="password" class="form-control" placeholder="Password" required>
             <span class="input-group-text">
               
             </span>
