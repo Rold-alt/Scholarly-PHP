@@ -2,32 +2,36 @@
 			margin: 0;
 			font-family: system-ui, sans-serif;
 		}
+		/* ============ Navbar ============ */
 		.navbar {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 20px 60px;
-			border-bottom: 2px solid #FFFFFF;
+  			padding: 0.75rem 2rem; 
+  			border-bottom: 0.5px solid #5c5a5a;   /* thinner border */
 		}
 		.nav-left img {
-			width: 342.71px;
-			height: 89.44px;
+ 		    width: clamp(160px, 20vw, 220px); /* medium responsive width */
+			height: auto;
 			object-fit: contain;
 		}
 		.nav-right {
 			display: flex;
 			align-items: center;
-			gap: 30px;
+			gap: 1.5rem;     
 		}
 		.nav-btn, .nav-link {
-			color: #FFFFFF;
-			font-size: 40px;
-			text-decoration: none;
-			transition: 0.3s ease;
+			 color: #fff;
+ 			 font-size: clamp(1rem, 1.4vw, 1.2rem);
+			padding: 0.4rem 0.8rem;   
+  			text-decoration: none;
+			  transition: color 0.3s ease;	
 		}
 		.nav-btn:hover, .nav-link:hover {
 			color: #7575C3;
 		}
+
+/* ============ Hero Section ============ */
 
 		.hero-text {
 			color: #FFFFFF;
@@ -47,7 +51,18 @@
 		.hero-subtitle span {
 			color: #7575C3;
 		}
-
+		.hero-wrapper {
+		   flex: 1;
+		   display: flex;
+ 		   justify-content: center;      
+  		   align-items: flex-start;      
+		   padding-top: 15vh;            
+           text-align: center;
+		}
+		.hero-text {
+		  margin: 0;
+		  padding: 0 20px;           
+		  }
 		.get-started {
 			display: inline-flex;
 			justify-content: center;
@@ -68,50 +83,6 @@
 			opacity: 0.9;
 			transform: scale(1.05);
 			background: rgba(255,255,255,0.1);
-		}
-
-		.cards {
-			display: flex;
-			justify-content: center;
-			gap: 40px;
-			margin: 60px auto;
-			flex-wrap: wrap;
-			max-width: 1200px;
-		}
-		.card {
-			background: transparent; 
-			border: 2px solid #FFFFFF; 
-			color: #FFFFFF;
-			width: 300px;
-			padding: 20px;
-			border-radius: 15px;
-			text-align: center;
-			transition: transform 0.3s ease;
-		}
-		.card:hover {
-			transform: translateY(-10px);
-		}
-		.card h3 {
-			color: #FFFFFF;
-			margin-bottom: 15px;
-		}
-		.card p {
-			font-size: 16px;
-			margin-bottom: 20px;
-		}
-		.card a {
-			display: inline-block;
-			padding: 10px 20px;
-			border-radius: 30px;
-			border: 2px solid #7575C3;
-			color: #7575C3;
-			text-decoration: none;
-			font-weight: bold;
-			transition: 0.3s;
-		}
-		.card a:hover {
-			background: #7575C3;
-			color: #fff;
 		}
 
 		.footer {
