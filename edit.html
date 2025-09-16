@@ -16,7 +16,7 @@
       <img src="assets/images/Group 44.png" alt="Scholarly Logo" class="logo mb-4">
       <div class="profile text-center mb-4">
         <img src="assets/Images/profile.png" alt="Profile" class="profile-img mb-2">
-        <h2 class="h5 fw-bold">Leonard Tariman</h2>
+        <h2 id="sidebarName" class="h5 fw-bold">Leonard Tariman</h2>
         <p class="small mb-2">STUDENT</p>
         <button class="btn btn-primary rounded-pill disabled">Edit Profile</button>
       </div>
@@ -69,11 +69,32 @@
         </div>
 
         <button type="submit" class="btn btn-primary rounded-pill">Save Changes</button>
-        <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill ms-2">Cancel</a>
+        <a href="dashboard.php" class="btn btn-outline-secondary rounded-pill ms-2">Cancel</a>
       </form>
     </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user-hydrate.js.php"></script>
+  <script>
+    (function() {
+      fetch('api-user-profile.php', { credentials: 'same-origin' })
+        .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function(data) {
+          try {
+            if (data.username) {
+              document.getElementById('fullName').value = data.username;
+              document.getElementById('sidebarName').textContent = data.username;
+            }
+            if (data.email) {
+              document.getElementById('email').value = data.email;
+            }
+            if (data.contact && document.getElementById('contact')) {
+              document.getElementById('contact').value = data.contact;
+            }
+          } catch (e) {}
+        }).catch(function(){ /* ignore */ });
+    })();
+  </script>
 </body>
 </html>

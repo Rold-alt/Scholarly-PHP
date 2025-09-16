@@ -29,14 +29,14 @@
       <img src="assets/images/Group 44.png" alt="Scholarly Logo" class="logo mb-4">
       <div class="profile text-center mb-4">
         <img src="assets/Images/profile.png" alt="Profile" class="profile-img mb-2">
-        <h2 class="h5 fw-bold">Leonard Tariman</h2>
+        <h2 id="sidebarName" class="h5 fw-bold">Leonard Tariman</h2>
         <p class="small mb-2">STUDENT</p>
         <button class="btn btn-primary rounded-pill">Edit Profile</button>
       </div>
       <hr class="w-100">
 
       <nav class="nav flex-column w-100">
-        <a href="dashboard.html" class="nav-link d-flex align-items-center gap-2 text-white">
+        <a href="dashboard.php" class="nav-link d-flex align-items-center gap-2 text-white">
           <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/P11DPD00iM/ypvgcziq_expires_30_days.png"> Home
         </a>
         <a href="settings.html" class="nav-link d-flex align-items-center gap-2 text-white active">
@@ -58,15 +58,15 @@
           <form>
             <div class="mb-3">
               <label class="form-label">Username</label>
-              <input type="text" class="form-control" value="Leonard Tariman">
+              <input id="setUsername" type="text" class="form-control" value="Leonard Tariman">
             </div>
             <div class="mb-3">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" value="leonard@example.com">
+              <input id="setEmail" type="email" class="form-control" value="leonard@example.com">
             </div>
             <div class="mb-3">
               <label class="form-label">Contact Number</label>
-              <input type="text" class="form-control" value="+63 912 345 6789">
+              <input id="setContact" type="text" class="form-control" value="+63 912 345 6789">
             </div>
             <button type="submit" class="btn btn-primary">Save Changes</button>
           </form>
@@ -103,5 +103,32 @@
     </main>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user-hydrate.js.php"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      fetch('api-user-profile.php', { credentials: 'same-origin', cache: 'no-store' })
+        .then(function(r){
+          if (r.status === 401) { window.location.href = 'login.html'; return Promise.reject(); }
+          if (!r.ok) { return Promise.reject(); }
+          return r.json();
+        })
+        .then(function(data){
+          try {
+            var u = (data && data.username) ? data.username : '';
+            var e = (data && data.email) ? data.email : '';
+            var c = (data && data.contact) ? data.contact : '';
+            var elUser = document.getElementById('setUsername');
+            var elEmail = document.getElementById('setEmail');
+            var elContact = document.getElementById('setContact');
+            var elSidebar = document.getElementById('sidebarName');
+            if (elUser) elUser.value = u;
+            if (elEmail) elEmail.value = e;
+            if (elContact) elContact.value = c;
+            if (elSidebar && u) elSidebar.textContent = u;
+          } catch(e) { /* ignore */ }
+        })
+        .catch(function(){ /* ignore */ });
+    });
+  </script>
 </body>
 </html>

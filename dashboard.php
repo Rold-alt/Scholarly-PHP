@@ -5,9 +5,6 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: login.html');
     exit();
 }
-
-// Optionally fetch user details from session
-$username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'User';
 ?>
 <!DOCTYPE html>
 <html lang="en">

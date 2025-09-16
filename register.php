@@ -29,6 +29,9 @@ $createTableSql = "CREATE TABLE IF NOT EXISTS users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
 $conn->query($createTableSql);
 
+// Ensure contact column is large enough (some UIs include country code/spaces)
+@$conn->query("ALTER TABLE users MODIFY contact VARCHAR(30) NOT NULL");
+
 // Get and validate form values
 $username = trim($_POST['username'] ?? '');
 $email = trim($_POST['email'] ?? '');
